@@ -1,0 +1,344 @@
+
+{% block contenu %}
+</br>
+<form action="" method="post"></br>
+    {%csrf_token%}
+
+
+    <div>
+   <label for="file">Sélectionner le fichier à convertir</label>
+   <input type="file" id="file" name="file" multiple>
+ </div>
+
+ <div>
+   <button>Convertir</button>
+ </div></br>
+</form>
+
+
+
+</br>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+:root{
+    --darktheme: #000;
+    --lightheme: #cad3f2;
+    --dark: #333;
+    --light: #fff;
+    --gradOrange: #D5A64A;
+    --gradPink: #E132F2;
+    --gradAqua: #0ACCCC;
+    --gradBlue: #1919D3;
+}
+
+
+.wrapper{
+overflow:hidden;
+background-color: rgb(0, 0, 0);
+
+margin: auto;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: .5s ease-in;
+}
+.theme-control-container{
+    padding:10px;
+    width: 100%;
+    height: 19px;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: flex-start;
+}
+.switch{
+    background-color:var(--lightheme);
+    width: 70px;
+    height: 30px;
+    border: 2px solid teal;
+    border-radius: 25px;
+}
+.slider{
+    position: relative;
+    background-color: var(--dark);
+    border-radius: 25px;
+    width:30px;
+    height: 27px;
+    float:right;
+    transition:  .4s ease-in-out;
+    cursor: pointer;
+}
+.container{
+    max-width: 500px;
+    width: 500px;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.container-circle1, .container-circle2{
+padding: 10px;
+display: flex;
+flex-direction: column;
+width: auto;
+height: auto;
+}
+.container-circle1{
+   justify-items: flex-start;
+}
+
+.outer-circle1 ,.outer-circle2{
+    max-width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-circle1 , .inner-circle2{
+    background: var(--darktheme);
+    padding: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: .5s ease-in;
+}
+.outer-circle1{
+    background:linear-gradient(to bottom right,var(--gradOrange),var(--gradPink));
+    box-shadow: 0px 0px 20px var(--gradOrange) ,0px 0px 40px var(--gradPink);
+    animation: circle-one 5s infinite;
+}
+.outer-circle2{
+    transform: translateX(200px);
+    background: linear-gradient(to bottom right, var(--gradAqua),var(--gradBlue));
+    box-shadow: 0px 0px 20px var(--gradAqua),0px 0px 10px var(--gradBlue);
+    animation: circle-two 5s infinite;
+}
+.inner-circle1{
+    box-shadow: 0px 0px 20px inset var(--gradPink),0px 0px 20px inset var(--gradOrange);
+}
+.inner-circle2{
+    box-shadow: 0px 0px 20px inset var(--gradBlue) ,0px 0px 10px inset var(--gradAqua);
+}
+
+.rectangle{
+    position: absolute;
+    background: linear-gradient(to bottom right, rgba(250, 249, 249, 0.645),rgba(255, 255, 255, 0.145));
+    border: 0.1px solid rgba(206, 206, 206, 0.583);
+    border-radius: 20px;
+    max-width: 300px;
+    width: 300px;
+    height: 450px;
+    z-index: 1;
+    transform: translate(100px,50px);
+    /* box-shadow: 0px 0px 10px #fff; */
+    /* filter: blur(1.2px); */
+    /* opacity: 0.95; */
+    /* animation: reflections 10s infinite; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* animation for circles */
+@keyframes circle-one {
+    0% {box-shadow: 0px 0px 20px #D5A64A ,0px 0px 35px #E132F2}
+    25% {box-shadow: 0px 0px 15px #D5A64A ,0px 0px 30px #E132F2}
+    50%{box-shadow: 0px 0px 5px #D5A64A ,0px 0px 2px #E132F2}
+    75%{box-shadow: 0px 0px 15px #D5A64A ,0px 0px 30px #E132F2}
+    100%{box-shadow: 0px 0px 20px #D5A64A ,0px 0px 35px #E132F2}
+}
+@keyframes circle-two{
+    0%{box-shadow: 0px 0px 2px #0ACCCC,0px 0px 1px #1919D3;}
+    25%{box-shadow: 0px 0px 10px #0ACCCC,0px 0px 3px #1919D3;}
+    50%{box-shadow: 0px 0px 20px #0ACCCC,0px 0px 10px #1919D3;}
+    75%{box-shadow: 0px 0px 10px #0ACCCC,0px 0px 3px #1919D3;}
+    100%{box-shadow: 0px 0px 2px #0ACCCC,0px 0px 1px #1919D3;}
+}
+
+/* for music player start here */
+
+/* album logo */
+.music-logo{
+border: 0.1px solid rgba(206, 206, 206, 0.583);
+border-radius: 20px;
+
+width: 220px;
+height: 220px;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 0 5px inset #fff;
+color: var(--light);
+transition: 0.5s ease-in;
+}
+.music-logo i{
+    font-size: 6rem;
+}
+/* track mins */
+.controls{
+    height: 4px;
+    width: 210px;
+    background: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--light);
+    transition: 0.5s ease-in;
+}
+.controls i{
+
+    /* color: #222; */
+    position: absolute;
+    left: 59%;
+}
+.controls-time{
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:var(--light);
+    font-weight: 200;
+}
+
+/* song name */
+.music-name{
+    color:var(--light);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+/* controls button  */
+.player-btn{
+    width: 210px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:var(--light);
+    font-size: 20px;
+}
+
+/* toogle classes */
+.light-theme{
+    background-color: var(--lightheme) !important;
+}
+.light{
+    color: var(--light) !important;
+}
+.dark{
+    color:var(--dark) !important;
+
+}
+.bgdark{
+    background: var(--dark) !important;
+}
+.bglight{
+    background: var(--lightheme) !important;
+}
+.opacity{
+    opacity: 0.95;
+}
+.leftslider{
+    float: left !important;
+}
+.bolder{
+    font-weight: 400 !important;
+}
+</style>
+<!-- Simple Modern Music Player  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+ <!-- background for theme -->
+    <div class="wrapper" id="theme" aria-valuetext="dark">
+        <!-- control theme -->
+        <div class="theme-control-container">
+            <div id="switch" class="switch">
+                <div id="slider" class="slider" onclick="changeTheme()"></div>
+            </div>
+        </div>
+        <!-- main container for player and visualizer -->
+        <div class="container">
+            <!-- for orange circle -->
+            <div class="container-circle1">
+                <div class="outer-circle1">
+                    <div id="inner-circle1" class="inner-circle1">
+
+                    </div>
+                </div>
+            </div>
+                <!-- for blue circle -->
+            <div class="container-circle2">
+                <div class="outer-circle2">
+                    <div id="inner-circle2" class="inner-circle2">
+
+                    </div>
+                </div>
+            </div>
+            <!-- music player starts here  -->
+            <div id="music-player" class="rectangle">
+                <!-- album logo -->
+                <div id="music-logo" class="music-logo">
+                    <i class="fas fa-music"></i>
+                </div>
+                <!-- track length -->
+                <div  id="controls" class="controls">
+                    <i id="control-points" class="fas fa-circle"></i>
+                </div>
+                <!-- time -->
+                <div id="controls-time" class="controls-time">
+                    <div class="starts-time">1:22</div>
+                    <div class="ends-time">-1:00</div>
+                </div>
+                <!-- song name -->
+                <div id="music-name" class="music-name">Lecture automatidue du texte</div>
+                <!-- player button and controls -->
+                <div id="player-btn" class="player-btn">
+                    <i class="fas fa-backward"></i>
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-forward"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+  // only for toggle theme
+var theme = document.getElementById('theme');
+var slider = document.getElementById("slider");
+var switchs = document.getElementById("switch");
+var innerCircle1 = document.getElementById("inner-circle1");
+var innerCircle2 = document.getElementById("inner-circle2");
+var albumLogo = document.getElementById("music-logo");
+var controls = document.getElementById("controls");
+var controlPoint = document.getElementById("control-points")
+var controlsTime = document.getElementById("controls-time");
+var musicName = document.getElementById("music-name");
+var playerBtn = document.getElementById("player-btn");
+// change theme
+function changeTheme(){
+    theme.classList.toggle("light-theme");
+    innerCircle1.classList.toggle("light-theme");
+    innerCircle2.classList.toggle("light-theme");
+    albumLogo.classList.toggle("dark");
+    controls.classList.toggle("dark");
+    controls.classList.toggle("bgdark");
+    controlPoint.classList.toggle("light");
+    controlsTime.classList.toggle("dark");
+    controlsTime.classList.toggle("bolder");
+    musicName.classList.toggle("dark");
+    playerBtn.classList.toggle("dark");
+    slider.classList.toggle("leftslider");
+    switchs.classList.toggle("bgdark");
+    slider.classList.toggle("bglight");
+
+}
+</script>
+{% endblock %}

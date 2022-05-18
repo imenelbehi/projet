@@ -1,0 +1,31 @@
+
+{% extends 'main.html' %}
+{% load static %}
+{% block contenu %}
+{% include 'base/navbar.html' %}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://apili.fr/wp-content/uploads/2020/05/enfant-qui-parle_1d136bf79d16695040ebad03a3a98fd7_2000.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Convertir paroles en texte écrit</h5>
+    <p class="card-text">Vous pouvez convertir vos paroles pour obtenir un texte écrit .</p>
+    <a href="{% url 'convertir_en_texte' %}" class="btn btn-primary">Cliquer ici </a>
+  </div>
+</div></br>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://us.123rf.com/450wm/marijamaca/marijamaca1904/marijamaca190400022/121003970-enfant-avec-probl%C3%A8me-auditif-sur-fond-bleu-perte-auditive-dans-l-enfance-sympt%C3%B4mes-et-concept-de-tra.jpg?ver=6" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Lecture automatique d'un texte</h5>
+    <p class="card-text">Vous pouvez lancer la lecture d un texte automatiqument .</p>
+    <a href="{% url 'lecture_automatique' %}" class="btn btn-primary">Cliquer ici </a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://www.wikihow.com/images_en/thumb/1/14/Teach-Kids-to-Summarize-Step-14Bullet2.jpg/v4-460px-Teach-Kids-to-Summarize-Step-14Bullet2.jpg.webp" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Obtenir votre résumé </h5>
+    <p class="card-text">Obtenir une reformulation brève et claire d'un texte plus long .</p>
+    <a href="{% url 'textes_resumés' %}" class="btn btn-primary">Cliquer ici</a>
+  </div>
+</div>
+{% include 'base/footer.html' %}
+{% endblock %}

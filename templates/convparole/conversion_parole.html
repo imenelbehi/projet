@@ -1,0 +1,710 @@
+
+{% block contenu %}
+
+
+<html class="no-js" lang="fr"><head><meta charset="utf-8">
+<script src="https://rules.quantcount.com/rules-p-31iz6hfFutd16.js" async=""></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://partner.googleadservices.com/gampad/cookie.js?domain=www.textfromtospeech.com&amp;callback=_gfp_s_&amp;client=ca-pub-9286936896439629&amp;cookie=ID%3D7c5c0772bc1b1960%3AT%3D1651653017%3AS%3DALNI_Mb9i34QyYXRFcIP3Jhq82yxVk5JRQ"></script><script src="https://secure.quantserve.com/quant.js" async="" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5SM9LBZ"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202204270101/show_ads_impl_fy2019.js" id="google_shimpl"></script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer="">var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=(function(){var count=0,incr=0,items=[],timeDelayFired=false,hpItems=[],lpItems=[],allowLoad=true;var obj={func:function(name,funcName,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError){var self=this;this.name=name;this.funcName=funcName;this.parameters=parameters===null?null:(parameters instanceof Array)?parameters:[parameters];this.isBlock=isBlock;this.blockedBy=blockedBy;this.deleteWhenComplete=deleteWhenComplete;this.isError=false;this.isComplete=false;this.isInitialized=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){log("... func = "+name);self.isInitialized=true;self.isComplete=true;log("... func.apply: "+name);var funcs=self.funcName.split('.');var func=null;if(funcs.length>3){}else if(funcs.length===3){func=window[funcs[0]][funcs[1]][funcs[2]];}else if(funcs.length===2){func=window[funcs[0]][funcs[1]];}else{func=window[self.funcName];}
+if(typeof func!=='undefined'&&func!==null){func.apply(null,this.parameters);}
+if(self.deleteWhenComplete===true)delete items[name];if(self.isBlock===true){log("----- F'D: "+self.name);processAll();}}},file:function(name,path,isBlock,blockedBy,async,defer,proceedIfError){var self=this;this.name=name;this.path=path;this.async=async;this.defer=defer;this.isBlock=isBlock;this.blockedBy=blockedBy;this.isInitialized=false;this.isError=false;this.isComplete=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){self.isInitialized=true;log("... file = "+name);var scr=document.createElement('script');scr.src=path;if(async===true)scr.async=true;else if(defer===true)scr.defer=true;scr.onerror=function(){log("----- ERR'D: "+self.name);self.isError=true;if(self.isBlock===true){processAll();}};scr.onreadystatechange=scr.onload=function(){var state=scr.readyState;log("----- F'D: "+self.name);if((!state||/loaded|complete/.test(state))){self.isComplete=true;if(self.isBlock===true){processAll();}}};document.getElementsByTagName('head')[0].appendChild(scr);}},fileLoaded:function(name,isComplete){this.name=name;this.path="";this.async=false;this.defer=false;this.isBlock=false;this.blockedBy=[];this.isInitialized=true;this.isError=false;this.isComplete=isComplete;this.proceedIfError=false;this.isTimeDelay=false;this.process=function(){};}};function init(){window.addEventListener("load",function(){setTimeout(function(){timeDelayFired=true;log('TDELAY -----');processAll();},5000);},false);}
+function addFile(name,path,isBlock,blockedBy,async,defer,proceedIfError,priority){var item=new obj.file(name,path,isBlock,blockedBy,async,defer,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function setallowLoad(settobool){allowLoad=settobool}
+function addFunc(name,func,parameters,isBlock,blockedBy,autoInc,deleteWhenComplete,proceedIfError,priority){if(autoInc===true)name=name+"_"+incr++;var item=new obj.func(name,func,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFile(name,path){var item=new obj.file(name,path,false,[],false,false,true);item.isTimeDelay=true;log(name+' ... '+' FILE! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFunc(name,func,parameters){var item=new obj.func(name,func,parameters,false,[],true,true);item.isTimeDelay=true;log(name+' ... '+' FUNCTION! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function checkIfBlocked(item){if(isBlocked(item)===true||allowLoad==false)return;item.process();}
+function isBlocked(item){if(item.isTimeDelay===true&&timeDelayFired===false){log(item.name+" blocked = TIME DELAY!");return true;}
+if(item.blockedBy instanceof Array){for(var i=0;i<item.blockedBy.length;i++){var block=item.blockedBy[i];if(items.hasOwnProperty(block)===false){log(item.name+" blocked = "+block);return true;}else if(item.proceedIfError===true&&items[block].isError===true){return false;}else if(items[block].isComplete===false){log(item.name+" blocked = "+block);return true;}}}
+return false;}
+function markLoaded(filename){if(!filename||0===filename.length){return;}
+if(filename in items){var item=items[filename];if(item.isComplete===true){log(item.name+' '+filename+': error loaded duplicate')}else{item.isComplete=true;item.isInitialized=true;}}else{items[filename]=new obj.fileLoaded(filename,true);}
+log("markLoaded dummyfile: "+items[filename].name);}
+function logWhatsBlocked(){for(var i in items){if(items.hasOwnProperty(i)===false)continue;var item=items[i];isBlocked(item)}}
+function log(msg){var href=window.location.href;var reg=new RegExp('[?&]ezq=([^&#]*)','i');var string=reg.exec(href);var res=string?string[1]:null;if(res==="1")console.debug(msg);}
+function processAll(){count++;if(count>200)return;log("let's go");processItems(hpItems);processItems(lpItems);}
+function processItems(list){for(var i in list){if(list.hasOwnProperty(i)===false)continue;var item=list[i];if(item.isComplete===true||isBlocked(item)||item.isInitialized===true||item.isError===true){if(item.isError===true){log(item.name+': error')}else if(item.isComplete===true){log(item.name+': complete already')}else if(item.isInitialized===true){log(item.name+': initialized already')}}else{item.process();}}}
+init();return{addFile:addFile,addDelayFile:addTimeDelayFile,addFunc:addFunc,addDelayFunc:addTimeDelayFunc,items:items,processAll:processAll,setallowLoad:setallowLoad,markLoaded:markLoaded,logWhatsBlocked:logWhatsBlocked,};})();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.vep=(function(){var pixels=[],pxURL="/detroitchicago/grapefruit.gif";function AddPixel(vID,pixelData){if(__ez.dot.isDefined(vID)&&__ez.dot.isValid(pixelData)){pixels.push({type:'video',video_impression_id:vID,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(pixelData)});}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender"){return;}
+if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
+var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&v="+btoa(JSON.stringify(pushPixels));__ez.dot.Fire(pixelURL);}}
+pixels=[];}
+return{Add:AddPixel,Fire:Fire};})();</script>
+    <script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer="">__ez.pel=(function(){var pixels=[],pxURL="/porpoiseant/army.gif";function AddAndFirePixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0);Fire();}
+function AddAndFireOrigPixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0,true);Fire();}
+function GetCurrentPixels(){return pixels;}
+function AddPixel(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id,isOrig){if(!__ez.dot.isDefined(adSlot)||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return;}
+if(typeof isOrig==='undefined'){isOrig=false;}
+var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getAdUnit(adSlot,isOrig);var compId=parseInt(__ez.dot.getTargeting(adSlot,"compid"));var lineItemId=0;var creativeId=0;var ezimData=getEzimData(adSlot);if(typeof ezimData=='object'){if(ezimData.creative_id!==undefined){creativeId=ezimData.creative_id;}
+if(ezimData.line_item_id!==undefined){lineItemId=ezimData.line_item_id;}}
+if(__ez.dot.isDefined(impId,adUnit)&&__ez.dot.isValid(pixelData)){if((impId!=="0"||isOrig===true)&&adUnit!==""){pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:"",bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:compId,line_item_id:lineItemId,creative_id:creativeId,data:__ez.dot.dataToStr(pixelData),is_orig:isOrig||__ez.template.isOrig,});}}}
+function AddPixelById(impFullId,pixelData,isOrig,revenue){var vals=impFullId.split('/');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&__ez.dot.isValid(pixelData)){var adUnit=vals[0],impId=vals[2];var pix={type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(pixelData),is_orig:isOrig||__ez.template.isOrig};if(typeof revenue!=='undefined'){pix.revenue=revenue;}
+pixels.push(pix);}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){var allPixels=[pixels.filter(function(pixel){return pixel.is_orig}),pixels.filter(function(pixel){return!pixel.is_orig})];allPixels.forEach(function(pixels){while(pixels.length>0){var isOrig=pixels[0].is_orig||false;var j=5;if(j>pixels.length){j=pixels.length;}
+var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(isOrig===true?1:0)+"&sts="+btoa(JSON.stringify(pushPixels));if(typeof window.isAmp!=='undefined'&&isAmp&&typeof window._ezaq!=='undefined'&&_ezaq.hasOwnProperty("domain_id")){pixelURL+="&visit_uuid="+_ezaq['visit_uuid'];}
+__ez.dot.Fire(pixelURL);}});}
+pixels=[];}
+function getEzimData(adSlot){if(typeof _ezim_d=="undefined"){return false;}
+var adUnitName=__ez.dot.getAdUnitPath(adSlot).split('/').pop();if(typeof _ezim_d==='object'&&_ezim_d.hasOwnProperty(adUnitName)){return _ezim_d[adUnitName];}
+for(var ezimKey in _ezim_d){if(ezimKey.split('/').pop()===adUnitName){return _ezim_d[ezimKey];}}
+return false;}
+return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddAndFireOrig:AddAndFireOrigPixel,AddById:AddPixelById,Fire:Fire,GetPixels:GetCurrentPixels,};})();</script>
+<form method="post" enctype="multipart/form-data"></br>
+
+    <title>conversion vocale</title>
+    <meta name="description" content="Dictez un texte en ligne. Vous parlez, je tape ! Service gratuit de reconnaissance vocale en ligne et de transcription en direct.">
+    <meta name="author" content="Snoweb">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tapez avec votre voix ! - Dictez un texte en ligne gratuitement - Speech to Text Online">
+    <meta property="og:description" content="Dictez un texte en ligne. Vous parlez, je tape ! Service gratuit de reconnaissance vocale en ligne et de transcription en direct.">
+
+    <meta property="og:url" content="https://www.textfromtospeech.com/fr/voice-to-text/">
+    <meta name="twitter:title" content="Tapez avec votre voix ! - Dictez un texte en ligne gratuitement - Speech to Text Online">
+    <meta name="twitter:description" content="Dictez un texte en ligne. Vous parlez, je tape ! Service gratuit de reconnaissance vocale en ligne et de transcription en direct.">
+
+
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/media/images/IMG_ICON_SPACE_GH0dmIv.2e16d0ba.fill-16x16.format-png.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/media/images/IMG_ICON_SPACE_GH0dmIv.2e16d0ba.fill-32x32.format-png.png">
+
+<link rel="icon" type="image/png" sizes="128x128" href="/media/images/IMG_ICON_SPACE_GH0dmIv.2e16d0ba.fill-128x128.format-png.png">
+
+<link rel="icon" type="image/png" sizes="167x167" href="/media/images/IMG_ICON_SPACE_GH0dmIv.2e16d0ba.fill-167x167.format-png.png">
+
+
+<link rel="icon" type="image/png" sizes="180x180" href="/media/images/IMG_ICON_SPACE_GH0dmIv.2e16d0ba.fill-180x180.format-png.png">
+<link rel="apple-touch-icon" href="/media/images/IMG_ICON_SPACE_GH0dmIv.2e16d0ba.fill-180x180.format-png.png">
+
+
+<link rel="icon" type="image/png" sizes="192x192" href="/media/images/IMG_ICON_SPACE_GH0dmIv.2e16d0ba.fill-192x192.format-png.png">
+
+<link rel="icon" type="image/png" sizes="196x196" href="/media/images/IMG_ICON_SPACE_GH0dmIv.2e16d0ba.fill-196x196.format-png.png">
+
+    <link rel="canonical" href="https://www.textfromtospeech.com/fr/voice-to-text/">
+
+
+
+        <style>
+            #loader{z-index:10000000000000;position:fixed;top:0;left:0;bottom:0;right:0;-webkit-transition:opacity .5s ease;transition:opacity .5s ease}#loader img{width:20px;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}#loader~div{display:none}
+        </style>
+
+
+
+
+
+
+</form>
+
+    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9286936896439629" crossorigin="anonymous" data-checked-head="true"></script>
+<script type="text/javascript">var ezouid = "1";</script><base href="https://www.textfromtospeech.com/fr/voice-to-text/"><script type="text/javascript">
+var ezoTemplate = 'old_site_excl';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script data-ezscrex="false" type="text/javascript">
+var soc_app_id = '0';
+var did = 228283;
+var ezdomain = 'textfromtospeech.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":0,"ad_lazyload_version":0,"ad_load_version":0,"city":"","country":"TN","days_since_last_visit":0,"domain_id":228283,"engaged_time_visit":162,"ezcache_level":1,"ezcache_skip_code":4,"form_factor_id":1,"framework_id":1,"is_return_visitor":true,"is_sitespeed":0,"last_page_load":"1651660074489","last_pageview_id":"f17a81d4-978b-4aaf-5e4f-bb28c9715358","lt_cache_level":0,"metro_code":0,"page_ad_positions":"","page_view_count":7,"page_view_id":"12f7969b-7f42-42e1-503c-1b493b41360f","position_selection_id":0,"postal_code":"","pv_event_count":0,"response_size_orig":152398,"response_time_orig":1676,"serverid":"15.206.171.116:10999","state":"","t_epoch":1651660077,"template_id":131,"time_on_site_visit":386,"url":"https://www.textfromtospeech.com/fr/voice-to-text/","user_id":0,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":3655,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";</script>
+<script data-ezscrex="false" data-pagespeed-no-defer="" data-cfasync="false">
+function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_228283=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+}
+function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["12f7969b-7f42-42e1-503c-1b493b41360f", "true"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script>
+<script type="text/javascript">var _audins_dom="textfromtospeech_com",_audins_did=228283;__ez.queue.addFile('/detroitchicago/cmbv2.js', '/detroitchicago/cmbv2.js?gcb=195-0&cb=04-1y02-5y06-12y07-1y19-5y0b-5y0d-14y13-3y17-4y1c-2y21-3y55-1&cmbcb=62&sj=x04x02x06x07x19x0bx0dx13x17x1cx21x55&abt=BidFloorMethod,BidFloorsubVersion', true, [], true, false, true, false);</script><script src="/detroitchicago/cmbv2.js?gcb=195-0&amp;cb=04-1y02-5y06-12y07-1y19-5y0b-5y0d-14y13-3y17-4y1c-2y21-3y55-1&amp;cmbcb=62&amp;sj=x04x02x06x07x19x0bx0dx13x17x1cx21x55&amp;abt=BidFloorMethod,BidFloorsubVersion" async=""></script>
+<script type="text/javascript" defer="">__ez.queue.addFile('/detroitchicago/cmbdv2.js', '/detroitchicago/cmbdv2.js?gcb=195-0&cb=03-5y0c-5y18-4&cmbcb=62&sj=x03x0cx18&abt=BidFloorMethod,BidFloorsubVersion', true, ['/detroitchicago/cmbv2.js'], true, false, true, false);</script><meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script src="/detroitchicago/cmbdv2.js?gcb=195-0&amp;cb=03-5y0c-5y18-4&amp;cmbcb=62&amp;sj=x03x0cx18&amp;abt=BidFloorMethod,BidFloorsubVersion" async=""></script><link rel="preload" href="https://adservice.google.tn/adsid/integrator.js?domain=www.textfromtospeech.com" as="script"><script type="text/javascript" src="https://adservice.google.tn/adsid/integrator.js?domain=www.textfromtospeech.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.textfromtospeech.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.textfromtospeech.com"></script></head>
+
+<body class="">
+
+
+    <div id="block-test-to-voice" class=" theme-bg-light">
+        <div class="container regular theme-light">
+
+            <div id="alert" class="alert alert-danger" style="display: none">
+    <a href="#" class="close" onclick="$('#alert').hide()">×</a>
+    <p id="alert-text"></p>
+</div>
+
+
+
+            <div class="s-flex-align">
+
+                    <h1>Convertir paroles en texte écrit</h1>
+
+                <img id="microphone" class="s-icon x1-5 animated" src="/media/media/microphone-light_qCRjtyL.svg" alt="Microphone" style="display: none">
+            </div>
+
+            <div class="main">
+                <div class="commands">
+
+                    <a id="toggle-dictation" href="javascript:void(0)">
+                        <img class="s-icon x1-5 fa-play" src="/media/media/play-light_hyPPuS0.svg" data-pause="/media/media/pause-light_F8pxZw9.svg" data-play="/media/media/play-light_hyPPuS0.svg" alt="Play">
+                        <p>Commencer à dicter</p>
+                    </a>
+
+                    <a id="zoom-out" href="javascript:void(0)">
+                        <img class="s-icon x1-5" src="/media/media/search_minus-light_0Qn8v9i.svg" alt="Search Minus">
+                        <p>Dézoomer</p>
+
+                    </a>
+                    <a id="zoom-in" href="javascript:void(0)">
+                        <img class="s-icon x1-5" src="/media/media/search_plus-light_uu4PMqS.svg" alt="Search Plus">
+                        <p>Zoomer</p>
+                    </a>
+
+
+                    <a id="clear-content" href="javascript:void(0)">
+                        <img class="s-icon x1-5" src="/media/media/clear-light_MRXXwOQ.svg" alt="Clear">
+                        <p>Effacer le contenu</p>
+                    </a>
+
+                    <a id="save-txt-content" href="javascript:void(0)">
+                        <img class="s-icon x1-5" src="/media/media/document_catch-light_l6oHLu7.svg" alt="Save">
+                        <p>Sauvegarder en tant que .txt</p>
+                    </a>
+
+                    <a id="save-word-content" href="javascript:void(0)">
+                        <img class="s-icon x1-5" src="/media/media/document_catch-light_l6oHLu7.svg" alt="Save Doc">
+                        <p>Sauvegarder en tant que .doc</p>
+                    </a>
+
+                    <a id="copy-content" data-clipboard-target="#text-box" href="javascript:void(0)">
+                        <img class="s-icon x1-5" src="/media/media/copy-light_MPkaOxy.svg" alt="Copy">
+                        <p>Copier le contenu</p>
+                    </a>
+
+                    <a id="print-content" href="javascript:void(0)">
+                        <img class="s-icon x1-5" src="/media/media/print-light_6fS1hkD.svg" alt="Print">
+                        <p>Imprimer le contenu</p>
+                    </a>
+
+                    <a id="send-content" href="javascript:void(0)">
+                        <img class="s-icon x1-5" src="/media/media/email_not_filled-light_lTpH5VY.svg" alt="Envelope">
+                        <p>Envoyer le contenu</p>
+                    </a>
+
+                    <div id="reader-voice-container">
+                        <div class="rvc">
+
+                            <div style="margin: 0 15px;">
+                                <p>Langue</p>
+                            </div>
+                        </div>
+                        <select id="reader-voice" data-select2-id="select2-data-reader-voice" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                            <option value="af-ZA">Afrikaans</option>
+                            <option value="am-ET">አማርኛ</option>
+                            <option value="az-AZ">Azərbaycanca</option>
+                            <option value="bn-BD">বাংলা - বাংলাদেশ</option>
+                            <option value="bn-IN">বাংলা - ভারত</option>
+                            <option value="id-ID">Bahasa Indonesia</option>
+                            <option value="ms-MY">Bahasa Melayu</option>
+                            <option value="ca-ES">Català</option>
+                            <option value="cs-CZ">Čeština</option>
+                            <option value="da-DK">Dansk</option>
+                            <option value="de-DE">Deutsch</option>
+                            <option value="en-AU">English - Australia</option>
+                            <option value="en-CA">English - Canada</option>
+                            <option value="en-IN">English - India</option>
+                            <option value="en-KE">English - Kenya</option>
+                            <option value="en-TZ">English - Tanzania</option>
+                            <option value="en-GH">English - Ghana</option>
+                            <option value="en-NZ">English - New Zealand</option>
+                            <option value="en-NG">English - Nigeria</option>
+                            <option value="en-ZA">English - South Africa</option>
+                            <option value="en-PH">English - Philippines</option>
+                            <option value="en-GB">English - United Kingdom</option>
+                            <option value="en-US">English - United States</option>
+                            <option value="es-AR">Español - Argentina</option>
+                            <option value="es-BO">Español - Bolivia</option>
+                            <option value="es-CL">Español - Chile</option>
+                            <option value="es-CO">Español - Colombia</option>
+                            <option value="es-CR">Español - Costa Rica</option>
+                            <option value="es-EC">Español - Ecuador</option>
+                            <option value="es-SV">Español - El Salvador</option>
+                            <option value="es-ES">Español - España</option>
+                            <option value="es-US">Español - Estados Unidos</option>
+                            <option value="es-GT">Español - Guatemala</option>
+                            <option value="es-HN">Español - Honduras</option>
+                            <option value="es-MX">Español - México</option>
+                            <option value="es-NI">Español - Nicaragua</option>
+                            <option value="es-PA">Español - Panamá</option>
+                            <option value="es-PY">Español - Paraguay</option>
+                            <option value="es-PE">Español - Perú</option>
+                            <option value="es-PR">Español - Puerto Rico</option>
+                            <option value="es-DO">Español - República Dominicana</option>
+                            <option value="es-UY">Español - Uruguay</option>
+                            <option value="es-VE">Español - Venezuela</option>
+                            <option value="eu-ES">Euskara</option>
+                            <option value="fil-PH">Filipino</option>
+                            <option value="fr-FR" selected="" data-select2-id="select2-data-2-h3fk">Français</option>
+                            <option value="jv-ID">Basa Jawa</option>
+                            <option value="gl-ES">Galego</option>
+                            <option value="gu-IN">ગુજરાતી</option>
+                            <option value="hr-HR">Hrvatski</option>
+                            <option value="zu-ZA">IsiZulu</option>
+                            <option value="is-IS">Íslenska</option>
+                            <option value="it-IT">Italiano - Italia</option>
+                            <option value="it-CH">Italiano - Svizzera</option>
+                            <option value="kn-IN">ಕನ್ನಡ</option>
+                            <option value="km-KH">ភាសាខ្មែរ</option>
+                            <option value="lv-LV">Latviešu</option>
+                            <option value="lt-LT">Lietuvių</option>
+                            <option value="ml-IN">മലയാളം</option>
+                            <option value="mr-IN">मराठी</option>
+                            <option value="hu-HU">Magyar</option>
+                            <option value="lo-LA">ລາວ</option>
+                            <option value="nl-NL">Nederlands</option>
+                            <option value="ne-NP">नेपाली भाषा</option>
+                            <option value="nb-NO">Norsk bokmål</option>
+                            <option value="pl-PL">Polski</option>
+                            <option value="pt-BR">Português - Brasil</option>
+                            <option value="pt-PT">Português - Portugal</option>
+                            <option value="ro-RO">Română</option>
+                            <option value="si-LK">සිංහල</option>
+                            <option value="sl-SI">Slovenščina</option>
+                            <option value="su-ID">Basa Sunda</option>
+                            <option value="sk-SK">Slovenčina</option>
+                            <option value="fi-FI">Suomi</option>
+                            <option value="sv-SE">Svenska</option>
+                            <option value="sw-TZ">Kiswahili - Tanzania</option>
+                            <option value="sw-KE">Kiswahili - Kenya</option>
+                            <option value="ka-GE">ქართული</option>
+                            <option value="hy-AM">Հայերեն</option>
+                            <option value="ta-IN">தமிழ் - இந்தியா</option>
+                            <option value="ta-SG">தமிழ் - சிங்கப்பூர்</option>
+                            <option value="ta-LK">தமிழ் - இலங்கை</option>
+                            <option value="ta-MY">தமிழ் - மலேசியா</option>
+                            <option value="te-IN">తెలుగు - </option>
+                            <option value="vi-VN">Tiếng Việt</option>
+                            <option value="tr-TR">Türkçe</option>
+                            <option value="ur-PK">اُردُو - پاکستان</option>
+                            <option value="ur-IN">اُردُو - بھارت</option>
+                            <option value="el-GR">Ελληνικά</option>
+                            <option value="bg-BG">български</option>
+                            <option value="ru-RU">Pусский</option>
+                            <option value="sr-RS">Српски</option>
+                            <option value="uk-UA">Українська</option>
+                            <option value="ko-KR">한국어</option>
+                            <option value="cmn-Hans-CN">中文 - 普通话 (中国大陆)</option>
+                            <option value="cmn-Hans-HK">中文 - 普通话 (香港)</option>
+                            <option value="cmn-Hant-TW">中文 - 中文 (台灣)</option>
+                            <option value="yue-Hant-HK">中文 - 粵語 (香港)</option>
+                            <option value="ja-JP">日本語</option>
+                            <option value="hi-IN">हिन्दी</option>
+                            <option value="th-TH">ภาษาไทย</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-bpbk" style="width: 298px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-reader-voice-container" aria-controls="select2-reader-voice-container"><span class="select2-selection__rendered" id="select2-reader-voice-container" role="textbox" aria-readonly="true" title="Français">Français</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+
+
+
+
+<div class="voice-commands">
+
+
+</div>
+
+
+                </div>
+
+                <div class="app">
+
+                    <div class="panel-body" id="text-box-container">
+                        <span id="text-box" contenteditable="true" tabindex="5" style="font-size: 16px; line-height: 18.4px;"><br></span>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div id="text-box-wrapper" class="align-text-center">
+
+
+
+                <form class="padding regular auto" style="display: none">
+                         {%csrf_token%}
+                    <div class="fields">
+                        <div class="form-group">
+                          rr :   <input type="file" name="select-file" style="display: inline-block;" tabindex="5">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Vitesse:</label>
+                            <input id="audio-rate" type="range" step="0.1" min="0.5" max="2" value="0.8" tabindex="5">
+                        </div>
+
+                        <div class="form-group">
+                          bb :   <audio controls="" name="audio-control" class="text-left" style="width: 100%;" tabindex="5"></audio>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_0_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_0_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://pagead2.googlesyndication.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;],&quot;additionalSigningData&quot;:&quot;eyJ1cmwiOiJodHRwczovL3d3dy50ZXh0ZnJvbXRvc3BlZWNoLmNvbS9mci92b2ljZS10by10ZXh0LyJ9&quot;}" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9286936896439629&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1651660080&amp;plat=1%3A1024%2C2%3A16778240%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fwww.textfromtospeech.com%2Ffr%2Fvoice-to-text%2F&amp;ea=0&amp;pra=5&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTAwLjAuNDg5Ni4xMjciLFtdLG51bGwsbnVsbCwiNjQiLFtbIiBOb3QgQTtCcmFuZCIsIjk5LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjEwMC4wLjQ4OTYuMTI3Il0sWyJHb29nbGUgQ2hyb21lIiwiMTAwLjAuNDg5Ni4xMjciXV0sZmFsc2Vd&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9wYWdlYWQyLmdvb2dsZXN5bmRpY2F0aW9uLmNvbSIsInN0YXRlIjoyMCwiaGFzUmVkZW1wdGlvblJlY29yZCI6dHJ1ZX1d&amp;dt=1651660080337&amp;bpp=2&amp;bdt=299&amp;idt=464&amp;shv=r20220502&amp;mjsv=m202204270101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D7c5c0772bc1b1960%3AT%3D1651653017%3AS%3DALNI_Mb9i34QyYXRFcIP3Jhq82yxVk5JRQ&amp;nras=1&amp;correlator=6425569117198&amp;frm=20&amp;pv=2&amp;ga_vid=970143105.1651653017&amp;ga_sid=1651660081&amp;ga_hid=365280340&amp;ga_fc=1&amp;u_tz=60&amp;u_his=3&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1349&amp;bih=625&amp;scr_x=0&amp;scr_y=0&amp;eid=44759875%2C44759926%2C44759837%2C21067496%2C31064018&amp;oid=2&amp;pvsid=218362557262568&amp;pem=492&amp;tmod=310210673&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.textfromtospeech.com%2Ffr%2Ftext-to-voice%2F&amp;eae=2&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C625&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=512" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&amp;display=swap">
+
+
+
+
+    <link href="/static/custom/dist/css/custom0.0.176.css" rel="stylesheet" type="text/css">
+
+    <link href="/static/custom/dist/css/tefrotos0.0.176.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+        <script>
+            const Icons = {'cross_red': {'space': '/static/webunity/img/svg/default.svg', 'light': '/static/webunity/img/svg/default.svg'}, 'info': {'space': '/static/webunity/img/svg/default.svg', 'light': '/static/webunity/img/svg/default.svg'}, 'map_marker': {'space': '/static/webunity/img/svg/default.svg', 'light': '/static/webunity/img/svg/default.svg'}, 'help': {'space': '/static/webunity/img/svg/default.svg', 'light': '/static/webunity/img/svg/default.svg'}, 'star_enable': {'space': '/static/webunity/img/svg/default.svg', 'light': '/static/webunity/img/svg/default.svg'}, 'star_disable': {'space': '/static/webunity/img/svg/default.svg', 'light': '/static/webunity/img/svg/default.svg'}, 'settings': {'space': '/static/webunity/img/svg/default.svg', 'light': '/static/webunity/img/svg/default.svg'}, 'envelope': {'space': '/static/webunity/img/svg/default.svg', 'light': '/static/webunity/img/svg/default.svg'}, 'microphone': {'space': '/media/media/microphone-dark_vnQcUht.svg', 'light': '/media/media/microphone-light_qCRjtyL.svg'}, 'flag_es': {'space': '/media/media/flag_es-dark_StL8OPE.svg', 'light': '/media/media/flag_es-light_p3rl12r.svg'}, 'success': {'space': '/media/media/success-dark_sDzgdfl.svg', 'light': '/media/media/success-light_xPsSHrs.svg'}, 'pause': {'space': '/media/media/pause-dark_Zsx7nwa.svg', 'light': '/media/media/pause-light_F8pxZw9.svg'}, 'stop': {'space': '/media/media/stop-dark_VpYTF1C.svg', 'light': '/media/media/stop-light_QqbITxy.svg'}, 'left': {'space': '/media/media/left-dark_E3whMmp.svg', 'light': '/media/media/left-light_C7f5XKW.svg'}, 'flag_ar': {'space': '/media/media/flag_ar-dark_8UsC4Ra.svg', 'light': '/media/media/flag_ar-light_qcE1ZIC.svg'}, 'angle': {'space': '/media/media/angle-dark_pS9Fi3j.svg', 'light': '/media/media/angle-light_K3PbGuj.svg'}, 'volume_up': {'space': '/media/media/volume_up-dark_nr1VNEQ.svg', 'light': '/media/media/volume_up-light_Zr8pbR8.svg'}, 'cross': {'space': '/media/media/cross-dark_WxbhoN3.svg', 'light': '/media/media/cross-light_GwwOEVR.svg'}, 'link': {'space': '/media/media/link-dark_RXwCAZH.svg', 'light': '/media/media/link-light_FDivoLC.svg'}, 'search': {'space': '/media/media/search-dark_WgNB44e.svg', 'light': '/media/media/search-light_1Vs8LjN.svg'}, 'flag_fr': {'space': '/media/media/flag_fr-dark_Ahb8YRm.svg', 'light': '/media/media/flag_fr-light_0bF3OfJ.svg'}, 'clear': {'space': '/media/media/clear-dark_RYiGVG7.svg', 'light': '/media/media/clear-light_MRXXwOQ.svg'}, 'right': {'space': '/media/media/right-dark_31Ua6FD.svg', 'light': '/media/media/right-light_UyuERf0.svg'}, 'flag_ru': {'space': '/media/media/flag_ru-dark_E4sJEt8.svg', 'light': '/media/media/flag_ru-light_MI4NzUU.svg'}, 'phone': {'space': '/media/media/phone-dark_TQ3Pzbz.svg', 'light': '/media/media/phone-light_HwrU7ph.svg'}, 'download': {'space': '/media/media/download-dark_jfyQpjk.svg', 'light': '/media/media/download-light_WcFR5Wo.svg'}, 'copy': {'space': '/media/media/copy-dark_KIHQb8n.svg', 'light': '/media/media/copy-light_MPkaOxy.svg'}, 'voice': {'space': '/media/media/voice-dark_gWilzge.svg', 'light': '/media/media/voice-light_BWeZSg9.svg'}, 'document_catch': {'space': '/media/media/document_catch-dark_7v1qdLE.svg', 'light': '/media/media/document_catch-light_l6oHLu7.svg'}, 'lock': {'space': '/media/media/lock-dark_Ua2c4cn.svg', 'light': '/media/media/lock-light_QiNEJb0.svg'}, 'money': {'space': '/media/media/money-dark_VJRIiXy.svg', 'light': '/media/media/money-light_6y3Bs46.svg'}, 'instagram': {'space': '/media/media/instagram-dark_fc49uCe.svg', 'light': '/media/media/instagram-light_XhcJi6g.svg'}, 'email_not_filled': {'space': '/media/media/email_not_filled-dark_RN5MFg3.svg', 'light': '/media/media/email_not_filled-light_lTpH5VY.svg'}, 'accordion': {'space': '/media/media/accordion-dark_PGsrMKy.svg', 'light': '/media/media/accordion-light_X9EuX2m.svg'}, 'flag_zh': {'space': '/media/media/flag_zh-dark_hANhYbL.svg', 'light': '/media/media/flag_zh-light_f0zh56T.svg'}, 'search_minus': {'space': '/media/media/search_minus-dark_YKAdBmF.svg', 'light': '/media/media/search_minus-light_0Qn8v9i.svg'}, 'flag_pl': {'space': '/media/media/flag_pl-dark_u0CAlUJ.svg', 'light': '/media/media/flag_pl-light_TWPl1xP.svg'}, 'time': {'space': '/media/media/time-dark_Aiwvevd.svg', 'light': '/media/media/time-light_PUgeUxU.svg'}, 'euro': {'space': '/media/media/euro-dark_U1JMTRn.svg', 'light': '/media/media/euro-light_asS3gzg.svg'}, 'facebook': {'space': '/media/media/facebook-dark_rJkgT7J.svg', 'light': '/media/media/facebook-light_70FYdR6.svg'}, 'user': {'space': '/media/media/user-dark_mATM1WM.svg', 'light': '/media/media/user-light_iIsOBLB.svg'}, 'flag_en': {'space': '/media/media/flag_en-dark_DxAhvxW.svg', 'light': '/media/media/flag_en-light_Wns9gUR.svg'}, 'flag_de': {'space': '/media/media/flag_de-dark_D8p6rkg.svg', 'light': '/media/media/flag_de-light_GJBzodc.svg'}, 'print': {'space': '/media/media/print-dark_b1fjfdw.svg', 'light': '/media/media/print-light_6fS1hkD.svg'}, 'tick': {'space': '/media/media/tick-dark_WesVJrN.svg', 'light': '/media/media/tick-light_9iBZjIu.svg'}, 'linkedin': {'space': '/media/media/linkedin-dark_csOU3ZY.svg', 'light': '/media/media/linkedin-light_mP4jmrD.svg'}, 'flag_it': {'space': '/media/media/flag_it-dark_2ce1BCX.svg', 'light': '/media/media/flag_it-light_bZCzm2N.svg'}, 'search_plus': {'space': '/media/media/search_plus-dark_5pEtd98.svg', 'light': '/media/media/search_plus-light_uu4PMqS.svg'}, 'play': {'space': '/media/media/play-dark_32nDVZh.svg', 'light': '/media/media/play-light_hyPPuS0.svg'}, 'flag_ja': {'space': '/media/media/flag_ja-dark_RnmZ3JO.svg', 'light': '/media/media/flag_ja-light_74XmnHR.svg'}, 'email': {'space': '/media/media/email-dark_9D0o7Um.svg', 'light': '/media/media/email-light_3g5Yhzb.svg'}, 'flag_uk': {'space': '/media/media/flag_uk-dark_v2boEpy.svg', 'light': '/media/media/flag_uk-light_Q4wQvFM.svg'}, 'voice_settings': {'space': '/media/media/voice_settings-dark_aYLylv1.svg', 'light': '/media/media/voice_settings-light_n0XG6ny.svg'}, 'pen': {'space': '/media/media/pen-dark_XOrtSd8.svg', 'light': '/media/media/pen-light_SExU2g2.svg'}};
+        </script>
+
+
+    <script async="" src="/static/custom/dist/js/app0.0.176.js"></script>
+
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/recorder.min.js"></script>
+
+
+    <script src="/static/js/jquery-ui.min.js"></script>
+    <script src="/static/js/clipboard.min.js"></script>
+    <script>
+        var LANGUAGES =
+        {en:
+        'en-US'
+        ,de:
+        'de-DE'
+        ,es:
+        'es-ES'
+        ,it:
+        'it-IT'
+        ,fr:
+        'fr-FR'
+        ,ja:
+        'ja-JP'
+        ,zh:
+        'zh-HANS'
+        ,ru:
+        'ru-RU'
+        ,uk:
+        'uk-UA'
+        ,pl:
+        'pl-PL'
+        ,ar:
+        'ar-SA'
+        ,pt:
+        'pt-BR'
+        ,nl:
+        'nl-NL'
+        ,el:
+        'el-GR'
+        ,km:
+        'km-KH'
+        ,id:
+        'id-ID'
+        ,sv:
+        'sv-SE'
+        ,fi:
+        'fi-FI'
+        ,da:
+        'da-DK'
+        ,tr:
+        'tr-TR'
+        ,ko:
+        'ko-KR'
+        ,hi:
+        'hi-IN'
+        ,bn:
+        'bn-BD'
+        ,no:
+        'no-NO'
+        ,ms:
+        'ms-MY'
+        ,th:
+        'th-TH'
+        ,af:
+        'af-ZA'
+        ,vi:
+        'vi-VN'
+        ,tl:
+        'fil-PH'
+        ,te:
+        'te-IN'
+        ,pa:
+        'pa-Guru-IN'
+        ,ta:
+        'ta-IN'
+        ,ro:
+        'ro-RO'
+        ,hu:
+        'hu-HU'
+        }
+        var SYMBOLS = {
+
+            '.'
+        : [
+
+            "Point"
+
+                ]
+
+
+        ,
+
+            ','
+        : [
+
+            "Virgule"
+
+                ]
+
+
+        ,
+
+            ';'
+        : [
+
+            "Point-virgule"
+
+                ]
+
+
+        ,
+
+            ':'
+        : [
+
+            "Deux-points"
+
+                ]
+
+
+        ,
+
+            '-'
+        : [
+
+            "Tiret"
+
+                ,
+
+
+            "Trait d’union"
+
+                ]
+
+
+        ,
+
+            '?'
+        : [
+
+            "Point d&#x27;interrogation"
+
+                ]
+
+
+        ,
+
+            '!'
+        : [
+
+            "Point d&#x27;exclamation"
+
+                ]
+
+
+        ,
+
+            '('
+        : [
+
+            "Parenthèse ouverte"
+
+                ]
+
+
+        ,
+
+            ')'
+        : [
+
+            "Parenthèse fermée"
+
+                ]
+
+
+        ,
+
+            ' '
+        : [
+
+            "Espace"
+
+                ]
+
+
+        ,
+
+            '↵'
+        : [
+
+            "Nouvelle ligne"
+
+                ,
+
+
+            "Enter"
+
+                ]
+
+
+        ,
+
+            '↵↵'
+        : [
+
+            "Nouveau paragraphe"
+
+                ]
+
+
+
+        };
+        var CURRENT_LANGUAGE = 'fr-FR';
+        var VALID_LANGUAGES = ["en", "de", "es", "it", "fr", "ja", "zh", "ru", "uk", "pl", "ar", "pt", "nl", "el", "km", "id", "sv", "fi", "da", "tr", "ko", "hi", "bn", "no", "ms", "th", "af", "vi", "tl", "te", "pa", "ta", "ro", "hu"];
+    </script>
+
+    <script src="/static/custom/dist/js/v2t0.0.176.js"></script>
+
+    <script>
+        if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+            writer.onerror = function (e) {
+                console.log(e.error);
+                var msg = 'Une erreur s\u0027est produite. Veuillez recharger la page.';
+                if (e.error === 'no-speech') {
+                    msg = 'La voix ne peut pas être détectée. Allumez le microphone et réessayez.';
+                } else if (e.error === 'audio-capture') {
+                    msg = 'Assurez\u002Dvous que votre microphone est connecté à l\u0027ordinateur et qu\u0027il est allumé.';
+                } else if (e.error === 'not-allowed') {
+                    msg = 'Impossible d\u0027accéder à votre microphone. Accédez à chrome://settings/contentExceptions#media\u002Dstream et autorisez l\u0027accès du microphone à ce site.';
+                }
+                if (e.error == 'network') {
+                    try {
+                        is_stopped = true;
+                        writer.start();
+                    } catch (e) {
+                    }
+                } else {
+                    $('#alert-text').text(msg).parent('#alert').show();
+                }
+
+            };
+        } else {
+            $(function () {
+                $('#alert-text').text('La reconnaissance vocale n\u0027est pas supportée pour cette version du navigateur. Veuillez la mettre à jour. Nous vous recommandons d\u0027utiliser la dernière version de Chrome. Vous pouvez toujours utiliser l\u0027éditeur pour sauvegarder le texte.').parent('#alert').show()
+            });
+
+        }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select[id="reader-voice"]').select2();
+        });
+    </script>
+
+
+<script>
+
+        (function () {
+
+
+            const loader = document.getElementById('loader');
+            loader.style.opacity = "0";
+            loader.style.zIndex = "-1";
+        })();
+
+</script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5SM9LBZ');</script>
+
+<noscript>
+    This website requires JavaScript. To contact us, please send us an email at:
+    <a href="mailto:hello@snoweb.fr">hello@snoweb.fr</a>
+</noscript>
+
+
+
+<script type="text/javascript" style="display:none;" async="">
+</script>
+
+<script type="text/javascript" data-cfasync="false"></script><script type="text/javascript" onload="__ezcl.handle(true);" async="" src="/utilcave_com/inc/ezcl.webp?cb=4"></script><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20220502/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>
+{% endblock %}
